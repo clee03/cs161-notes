@@ -56,6 +56,9 @@ public class WordFrequencyCounter {
     wc.countAll(l.iterator());
     System.out.println(wc.counter);
 
+    System.out.println("junk reader");
+    Iterator<String> iter = new Iterator<String>("wordsjunk.txt");
+
 
   }
 }
