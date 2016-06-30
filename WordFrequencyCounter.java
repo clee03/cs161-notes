@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
-
+import java.io.FileNotFoundException;
 
 public class WordFrequencyCounter {
   //use interface and genercize
@@ -31,7 +31,7 @@ public class WordFrequencyCounter {
     }
   }
 
-  public static void main (String [] args) {
+  public static void main (String [] args) throws FileNotFoundException{
     System.out.println("hello, world");
 
     WordFrequencyCounter wc = new WordFrequencyCounter();
@@ -57,7 +57,11 @@ public class WordFrequencyCounter {
     System.out.println(wc.counter);
 
     System.out.println("junk reader");
-    Iterator<String> iter = new Iterator<String>("wordsjunk.txt");
+    // Iterator<String> iter = new Iterator<String>() {
+    //   //define this inner interface, has, hasNext, remove. ex. FileVisitor annonymous one-time use
+    // };
+
+    JunkReader jr = new JunkReader("wordsjunk.txt");
 
 
   }
