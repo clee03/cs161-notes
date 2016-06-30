@@ -44,7 +44,7 @@ public class JunkReader implements Iterator<String>{
 
   public String next() {
     if (!hasNext()) {
-      throw new NoSuchElementException();
+      throw new NoSuchElementException("no more");
     }
     String t = nextLine;
     nextLine = null;
@@ -52,6 +52,6 @@ public class JunkReader implements Iterator<String>{
   }
 
   public void remove () {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("unsupported operation");
   }
 }

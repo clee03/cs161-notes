@@ -63,6 +63,11 @@ public class WordFrequencyCounter {
 
     JunkReader jr = new JunkReader("wordsjunk.txt");
 
+    while(jr.hasNext()) {
+      String ln = jr.next();
+      System.out.println(ln);
+    }
+
 
   }
 }
